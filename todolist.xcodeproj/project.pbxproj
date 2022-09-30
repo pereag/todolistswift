@@ -17,6 +17,8 @@
 		D8029A3728E70A6C0043BAAE /* todolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A3628E70A6C0043BAAE /* todolistTests.swift */; };
 		D8029A4128E70A6C0043BAAE /* todolistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A4028E70A6C0043BAAE /* todolistUITests.swift */; };
 		D8029A4328E70A6C0043BAAE /* todolistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */; };
+		D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A5228E70B640043BAAE /* ListViewModel.swift */; };
+		D8029A5528E70BC90043BAAE /* ItemListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A5428E70BC90043BAAE /* ItemListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D8029A3C28E70A6C0043BAAE /* todolistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8029A4028E70A6C0043BAAE /* todolistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITests.swift; sourceTree = "<group>"; };
 		D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8029A5228E70B640043BAAE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D8029A5428E70BC90043BAAE /* ItemListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,11 @@
 		D8029A1B28E70A6A0043BAAE /* todolist */ = {
 			isa = PBXGroup;
 			children = (
+				D8029A5128E70AD20043BAAE /* Controller */,
+				D8029A5028E70ACB0043BAAE /* View */,
+				D8029A4F28E70AC30043BAAE /* Model */,
 				D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */,
 				D8029A1E28E70A6A0043BAAE /* SceneDelegate.swift */,
-				D8029A2028E70A6A0043BAAE /* ViewController.swift */,
 				D8029A2228E70A6A0043BAAE /* Main.storyboard */,
 				D8029A2828E70A6C0043BAAE /* Assets.xcassets */,
 				D8029A2A28E70A6C0043BAAE /* LaunchScreen.storyboard */,
@@ -128,6 +134,30 @@
 				D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */,
 			);
 			path = todolistUITests;
+			sourceTree = "<group>";
+		};
+		D8029A4F28E70AC30043BAAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8029A5228E70B640043BAAE /* ListViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8029A5028E70ACB0043BAAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8029A5428E70BC90043BAAE /* ItemListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8029A5128E70AD20043BAAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8029A2028E70A6A0043BAAE /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8029A5528E70BC90043BAAE /* ItemListCell.swift in Sources */,
 				D8029A2128E70A6A0043BAAE /* ViewController.swift in Sources */,
 				D8029A1D28E70A6A0043BAAE /* AppDelegate.swift in Sources */,
 				D8029A1F28E70A6A0043BAAE /* SceneDelegate.swift in Sources */,
+				D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */,
 				D8029A2728E70A6A0043BAAE /* todolist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +488,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperello.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,6 +519,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.valentinperello.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
