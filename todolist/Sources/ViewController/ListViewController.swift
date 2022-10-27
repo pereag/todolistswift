@@ -19,15 +19,30 @@ class ListViewController: UIViewController {
     @IBOutlet private weak var todoTableView: UITableView!
     
     // MARK: LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         listViewModel.viewDidLoad()
+        listViewModel.displayedAlert = { [weak self] alertContent in
+            DispatchQueue.main.async {
+                self?.presentAlert(content: alertContent)
+            }
+            
+        }
     }
     
     // MARK: Output
     @IBAction func didPressAddButton(_ sender: Any) {
         listViewModel.didPressAdd(todo: todoTextField.text ?? "")
         todoTextField.text = ""
+    }
+}
+
+extension UIViewController {
+    func presentAlert(content: AlertContent) {
+        let alertVC = UIAlertController( title: content.title, message: content.message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: content.cancelTitle, style: .cancel, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
     }
 }
 

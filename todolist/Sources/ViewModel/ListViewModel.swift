@@ -23,21 +23,30 @@ class ListViewModel {
         displayTodoList?(todos)
     }
     
-    
     //MARK: Outputs
     
     var displayTodoList: (([String]) -> Void)?
+    var displayedAlert: ((AlertContent) -> Void)?
     
     // MARK: Inputs
     
     func didPressAdd(todo: String) {
-        todos.append(todo)
-        print(todos)
+        let todoClean = todo.trimmingCharacters(in: .whitespaces)
+        if todoClean != "" {
+            todos.append(todo)
+            print(todos)
+        } else {
+            let alertContent = AlertContent(
+                title: "Alert",
+                message: "The todo field is empty.",
+                cancelTitle: "Ok"
+            )
+            self.displayedAlert?(alertContent)
+            print(todoClean)
+        }
     }
     
     // MARK: Endpoint
-    
-    
     
     
 }
