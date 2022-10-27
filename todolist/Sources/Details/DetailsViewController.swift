@@ -4,8 +4,8 @@
 //
 //  Created by Valc0d3 on 27/10/2022.
 //
-import Foundation
+import UIKit
 
-class DetailsViewController {
+class DetailsViewController: UIViewController {
     
 }

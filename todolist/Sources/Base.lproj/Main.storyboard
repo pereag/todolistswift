@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="width" secondItem="D4J-Bi-51D" secondAttribute="height" multiplier="375:503" id="Qht-o6-kbT"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="54" id="OKM-1Z-lJr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="54" id="OKM-1Z-lJr" customClass="ItemTableViewCell" customModule="todolist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OKM-1Z-lJr" id="naZ-wm-wc5">
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="176.80000000000001" y="-204.64767616191907"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="OJd-bc-4fJ">
             <objects>
-                <viewController id="f3g-T9-c7G" sceneMemberID="viewController">
+                <viewController id="f3g-T9-c7G" customClass="DetailsViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VwY-KZ-ttP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
