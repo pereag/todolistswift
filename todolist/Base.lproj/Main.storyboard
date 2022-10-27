@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                 <rect key="frame" x="304" y="95" width="55" height="36"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="didPressAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b55-iM-Noe"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D4J-Bi-51D">
                                 <rect key="frame" x="0.0" y="164" width="375" height="503"/>
@@ -68,7 +71,7 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Edit"/>
                                                             <connections>
-                                                                <segue destination="f3g-T9-c7G" kind="showDetail" id="Iut-kh-exZ"/>
+                                                                <segue destination="f3g-T9-c7G" kind="showDetail" id="LCW-f8-SxU"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -113,6 +116,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="GOJ-3N-Ulp" id="eqy-IL-jYS"/>
                         <outlet property="titleLabel" destination="Kar-Ht-b6C" id="1s1-Qj-m7o"/>
                         <outlet property="todoTableView" destination="D4J-Bi-51D" id="nbp-q6-XeR"/>
                         <outlet property="todoTextField" destination="xlF-cf-CX2" id="YU1-Hs-1eC"/>
@@ -173,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0H-SB-PKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.60000000000002" y="-205.54722638680661"/>
+            <point key="canvasLocation" x="1012" y="-205"/>
         </scene>
     </scenes>
     <resources>
