@@ -15,13 +15,15 @@
 		D8029A2928E70A6C0043BAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2828E70A6C0043BAAE /* Assets.xcassets */; };
 		D8029A2C28E70A6C0043BAAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2A28E70A6C0043BAAE /* LaunchScreen.storyboard */; };
 		D8029A3728E70A6C0043BAAE /* todolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A3628E70A6C0043BAAE /* todolistTests.swift */; };
-		D8029A4128E70A6C0043BAAE /* todolistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A4028E70A6C0043BAAE /* todolistUITests.swift */; };
-		D8029A4328E70A6C0043BAAE /* todolistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */; };
 		D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A5228E70B640043BAAE /* ListViewModel.swift */; };
 		D82F97EB290A91AA00C6D032 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97EA290A91AA00C6D032 /* DetailsViewController.swift */; };
 		D82F97ED290A91D300C6D032 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97EC290A91D300C6D032 /* DetailsViewModel.swift */; };
 		D82F97EF290ABAED00C6D032 /* AlerteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97EE290ABAED00C6D032 /* AlerteContent.swift */; };
 		D82F97F3290ACCBD00C6D032 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */; };
+		D8E6EA452922DBC400363783 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA442922DBC400363783 /* Context.swift */; };
+		D8E6EA482922DC4500363783 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA472922DC4500363783 /* CoreDataStack.swift */; };
+		D8E6EA4A2922DC7100363783 /* TodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA492922DC7100363783 /* TodoEntity.swift */; };
+		D8E6EA4C2922DE4400363783 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA4B2922DE4400363783 /* ListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +56,15 @@
 		D8029A3228E70A6C0043BAAE /* todolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8029A3628E70A6C0043BAAE /* todolistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistTests.swift; sourceTree = "<group>"; };
 		D8029A3C28E70A6C0043BAAE /* todolistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8029A4028E70A6C0043BAAE /* todolistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITests.swift; sourceTree = "<group>"; };
-		D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D8029A5228E70B640043BAAE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D82F97EA290A91AA00C6D032 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D82F97EC290A91D300C6D032 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		D82F97EE290ABAED00C6D032 /* AlerteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteContent.swift; sourceTree = "<group>"; };
 		D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		D8E6EA442922DBC400363783 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		D8E6EA472922DC4500363783 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		D8E6EA492922DC7100363783 /* TodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEntity.swift; sourceTree = "<group>"; };
+		D8E6EA4B2922DE4400363783 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +97,6 @@
 			children = (
 				D8029A1B28E70A6A0043BAAE /* todolist */,
 				D8029A3528E70A6C0043BAAE /* todolistTests */,
-				D8029A3F28E70A6C0043BAAE /* todolistUITests */,
 				D8029A1A28E70A6A0043BAAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,21 +128,13 @@
 			path = todolistTests;
 			sourceTree = "<group>";
 		};
-		D8029A3F28E70A6C0043BAAE /* todolistUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D8029A4028E70A6C0043BAAE /* todolistUITests.swift */,
-				D8029A4228E70A6C0043BAAE /* todolistUITestsLaunchTests.swift */,
-			);
-			path = todolistUITests;
-			sourceTree = "<group>";
-		};
 		D8029A4F28E70AC30043BAAE /* List */ = {
 			isa = PBXGroup;
 			children = (
 				D82F97F4290ACD5600C6D032 /* cell */,
 				D8029A5228E70B640043BAAE /* ListViewModel.swift */,
 				D8029A2028E70A6A0043BAAE /* ListViewController.swift */,
+				D8E6EA4B2922DE4400363783 /* ListRepository.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -153,13 +148,6 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		D82F97E9290A90C100C6D032 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		D82F97F0290ABB3400C6D032 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,9 +157,10 @@
 				D8029A2A28E70A6C0043BAAE /* LaunchScreen.storyboard */,
 				D8029A2528E70A6A0043BAAE /* todolist.xcdatamodeld */,
 				D82F97EE290ABAED00C6D032 /* AlerteContent.swift */,
+				D8E6EA442922DBC400363783 /* Context.swift */,
+				D8E6EA462922DBF800363783 /* CoreData */,
 				D8029A4F28E70AC30043BAAE /* List */,
 				D8029A5128E70AD20043BAAE /* Details */,
-				D82F97E9290A90C100C6D032 /* Repository */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -191,6 +180,15 @@
 				D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		D8E6EA462922DBF800363783 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6EA472922DC4500363783 /* CoreDataStack.swift */,
+				D8E6EA492922DC7100363783 /* TodoEntity.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +325,12 @@
 				D8029A2128E70A6A0043BAAE /* ListViewController.swift in Sources */,
 				D82F97F3290ACCBD00C6D032 /* ItemTableViewCell.swift in Sources */,
 				D8029A1D28E70A6A0043BAAE /* AppDelegate.swift in Sources */,
+				D8E6EA452922DBC400363783 /* Context.swift in Sources */,
 				D8029A1F28E70A6A0043BAAE /* SceneDelegate.swift in Sources */,
+				D8E6EA4C2922DE4400363783 /* ListRepository.swift in Sources */,
 				D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */,
+				D8E6EA4A2922DC7100363783 /* TodoEntity.swift in Sources */,
+				D8E6EA482922DC4500363783 /* CoreDataStack.swift in Sources */,
 				D82F97ED290A91D300C6D032 /* DetailsViewModel.swift in Sources */,
 				D8029A2728E70A6A0043BAAE /* todolist.xcdatamodeld in Sources */,
 				D82F97EF290ABAED00C6D032 /* AlerteContent.swift in Sources */,
@@ -348,8 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8029A4328E70A6C0043BAAE /* todolistUITestsLaunchTests.swift in Sources */,
-				D8029A4128E70A6C0043BAAE /* todolistUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
