@@ -11,6 +11,6 @@ final class Context {
     let stack: CoreDataStack
     
     init() {
-        stack = CoreDataStack(modelName: "TodoList", type: .prod)
+        stack = CoreDataStack(modelName: "Todo", type: .prod)
     }
 }

@@ -16,9 +16,14 @@ final class ListRepository : ListRepositoryType {
     }
     
     func addTodo(content: String) {
+        
         let todoObject = TodoEntity(context: stack.context)
+        
         todoObject.content = content
         stack.saveContext()
+        
+        print("yolo: ", stack.context)
+        
     }
     
     func removeTodo(index: Int) {

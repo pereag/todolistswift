@@ -11,10 +11,11 @@ final class ItemTableViewCell: UITableViewCell {
     var index: IndexPath?
     
     // MARK: - Input
-    
-    
+    @IBOutlet weak var todoContentLabel: UILabel!
+    @IBOutlet weak var editButtonLabel: NSLayoutConstraint!
     
     // MARK: Outputs
-    
-    
+    @IBAction func didPressEditButton(_ sender: Any) {
+        
+    }
 }

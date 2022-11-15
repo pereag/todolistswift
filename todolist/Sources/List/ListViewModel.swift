@@ -10,16 +10,25 @@ import Foundation
 class ListViewModel {
     
     // MARK: - Properties
-    
+    var context: Context? = nil
+    var repository: ListRepository? = nil
     private var todos: [String] = [] {
         didSet {
-            // Add string in coredata
+            
+            if let lastElement = todos.last {
+                
+                repository!.addTodo(content: lastElement)
+            }
         }
     }
     
     // MARK: - Initializer
     
     func viewDidLoad() {
+        context = Context.init()
+        
+        repository = ListRepository(stack: context!.stack)
+        
         displayTodoList?(todos)
     }
     
@@ -42,6 +51,7 @@ class ListViewModel {
                 cancelTitle: "Ok"
             )
             self.displayedAlert?(alertContent)
+            
             print(todoClean)
         }
     }

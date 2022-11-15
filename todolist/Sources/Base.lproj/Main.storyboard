@@ -71,6 +71,7 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Edit"/>
                                                             <connections>
+                                                                <action selector="didPressEditButton:" destination="OKM-1Z-lJr" eventType="touchUpInside" id="Jnr-na-KHv"/>
                                                                 <segue destination="f3g-T9-c7G" kind="showDetail" id="LCW-f8-SxU"/>
                                                             </connections>
                                                         </button>
@@ -93,6 +94,10 @@
                                                 <constraint firstItem="OGf-yz-Pvi" firstAttribute="leading" secondItem="naZ-wm-wc5" secondAttribute="leading" id="a4s-s8-VuU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="editButtonLabel" destination="WeM-ke-57J" id="mjV-Wc-yk0"/>
+                                            <outlet property="todoContentLabel" destination="LMK-jP-6ys" id="5Zg-vE-Ge5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
