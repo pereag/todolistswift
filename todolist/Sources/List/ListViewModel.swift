@@ -10,14 +10,12 @@ import Foundation
 class ListViewModel {
     
     // MARK: - Properties
-    var context: Context? = nil
+    var context: Context = Context.init()
     var repository: ListRepository? = nil
     private var todos: [String] = [] {
         didSet {
-            
             if let lastElement = todos.last {
-                
-                repository!.addTodo(content: lastElement)
+                repository?.addTodo(content: lastElement)
             }
         }
     }
@@ -25,10 +23,7 @@ class ListViewModel {
     // MARK: - Initializer
     
     func viewDidLoad() {
-        context = Context.init()
-        
-        repository = ListRepository(stack: context!.stack)
-        
+        repository = ListRepository(stack: context.stack)
         displayTodoList?(todos)
     }
     
@@ -51,7 +46,6 @@ class ListViewModel {
                 cancelTitle: "Ok"
             )
             self.displayedAlert?(alertContent)
-            
             print(todoClean)
         }
     }

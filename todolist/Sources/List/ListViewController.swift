@@ -10,6 +10,8 @@ import UIKit
 class ListViewController: UIViewController {
     
     private let listViewModel = ListViewModel()
+    private let dataSource = ListViewDataSource()
+    private let Todo: [String] = []
 
     // MARK: Inputs
     
@@ -23,12 +25,25 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         listViewModel.viewDidLoad()
+        bindViewModel()
+        todoTableView.dataSource = dataSource
+        todoTableView.delegate = dataSource
+    }
+    
+    private func bindViewModel() {
+        listViewModel.displayTodoList = { [weak self] items in
+            self?.dataSource.update(items: items)
+            self?.todoTableView.reloadData()
+        }
         listViewModel.displayedAlert = { [weak self] alertContent in
             DispatchQueue.main.async {
                 self?.presentAlert(content: alertContent)
             }
-            
         }
+    }
+    
+    private func bindDataSource() {
+       // dataSource.didSelectItemAt = listViewModel
     }
     
     // MARK: Output

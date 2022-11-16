@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +47,7 @@
                                     <constraint firstAttribute="width" secondItem="D4J-Bi-51D" secondAttribute="height" multiplier="375:503" id="Qht-o6-kbT"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="54" id="OKM-1Z-lJr" customClass="ItemTableViewCell" customModule="todolist" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="54" id="OKM-1Z-lJr" customClass="ItemTableViewCell" customModule="todolist" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OKM-1Z-lJr" id="naZ-wm-wc5">
@@ -57,19 +58,36 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMK-jP-6ys">
-                                                            <rect key="frame" x="16" y="0.0" width="277" height="54"/>
+                                                            <rect key="frame" x="16" y="0.0" width="71" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-wl-0aM">
-                                                            <rect key="frame" x="302" y="9.5" width="57" height="35"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CY-3R-TAS">
+                                                            <rect key="frame" x="327" y="9.5" width="35" height="35"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="57" id="c9l-pX-oHn"/>
-                                                                <constraint firstAttribute="height" constant="35" id="ezZ-b4-oIF"/>
+                                                                <constraint firstAttribute="width" constant="35" id="Get-tN-dCA"/>
+                                                                <constraint firstAttribute="height" constant="35" id="URG-N5-398"/>
+                                                            </constraints>
+                                                            <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="">
+                                                                <imageReference key="image" image="xmark.bin.fill" catalog="system" symbolScale="small"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="didPressRemoveButton:" destination="OKM-1Z-lJr" eventType="touchUpInside" id="57g-vN-wBf"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-wl-0aM">
+                                                            <rect key="frame" x="284" y="9.5" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="kNI-hs-Om1"/>
+                                                                <constraint firstAttribute="width" constant="35" id="lOM-dD-qW5"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="Edit"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="">
+                                                                <imageReference key="image" image="pencil" catalog="system" symbolScale="medium"/>
+                                                            </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="didPressEditButton:" destination="OKM-1Z-lJr" eventType="touchUpInside" id="Jnr-na-KHv"/>
                                                                 <segue destination="f3g-T9-c7G" kind="showDetail" id="LCW-f8-SxU"/>
@@ -79,11 +97,13 @@
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="LMK-jP-6ys" secondAttribute="bottom" id="0DB-NI-A0N"/>
-                                                        <constraint firstAttribute="trailing" secondItem="TaD-wl-0aM" secondAttribute="trailing" constant="16" id="G1f-lr-O7t"/>
-                                                        <constraint firstItem="TaD-wl-0aM" firstAttribute="leading" secondItem="LMK-jP-6ys" secondAttribute="trailing" constant="9" id="Tf7-sJ-dtj"/>
-                                                        <constraint firstItem="TaD-wl-0aM" firstAttribute="centerY" secondItem="LMK-jP-6ys" secondAttribute="centerY" id="WeM-ke-57J"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5CY-3R-TAS" secondAttribute="trailing" constant="13" id="A30-jC-Y4P"/>
+                                                        <constraint firstAttribute="height" constant="54" id="FSP-5J-ctT"/>
                                                         <constraint firstItem="LMK-jP-6ys" firstAttribute="leading" secondItem="OGf-yz-Pvi" secondAttribute="leading" constant="16" id="lpo-Km-msV"/>
                                                         <constraint firstItem="LMK-jP-6ys" firstAttribute="top" secondItem="OGf-yz-Pvi" secondAttribute="top" id="vah-nL-6JI"/>
+                                                        <constraint firstItem="5CY-3R-TAS" firstAttribute="centerY" secondItem="OGf-yz-Pvi" secondAttribute="centerY" id="xTS-E0-3My"/>
+                                                        <constraint firstItem="TaD-wl-0aM" firstAttribute="centerY" secondItem="OGf-yz-Pvi" secondAttribute="centerY" id="xrT-gO-Tl6"/>
+                                                        <constraint firstItem="5CY-3R-TAS" firstAttribute="leading" secondItem="TaD-wl-0aM" secondAttribute="trailing" constant="8" symbolic="YES" id="zlM-Tq-nF6"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -95,7 +115,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="editButtonLabel" destination="WeM-ke-57J" id="mjV-Wc-yk0"/>
                                             <outlet property="todoContentLabel" destination="LMK-jP-6ys" id="5Zg-vE-Ge5"/>
                                         </connections>
                                     </tableViewCell>
@@ -139,12 +158,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiK-7e-Wh3">
-                                <rect key="frame" x="16" y="596" width="343" height="35"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Remove"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-zJ-XGz">
                                 <rect key="frame" x="16" y="16" width="343" height="27.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
@@ -166,14 +179,11 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="3zz-xd-Y1d" firstAttribute="height" secondItem="oAJ-mG-31O" secondAttribute="height" multiplier="0.971429" id="1Zx-0r-vA9"/>
-                            <constraint firstItem="AiK-7e-Wh3" firstAttribute="leading" secondItem="258-jj-ndm" secondAttribute="leading" constant="16" id="4Km-Ap-Cjl"/>
                             <constraint firstItem="Ibb-zJ-XGz" firstAttribute="top" secondItem="258-jj-ndm" secondAttribute="top" constant="16" id="B7r-Lv-fuN"/>
                             <constraint firstItem="258-jj-ndm" firstAttribute="trailing" secondItem="Ibb-zJ-XGz" secondAttribute="trailing" constant="16" id="Blc-LR-Vgj"/>
                             <constraint firstItem="oAJ-mG-31O" firstAttribute="leading" secondItem="3zz-xd-Y1d" secondAttribute="trailing" constant="9" id="RCx-xG-Zze"/>
                             <constraint firstItem="oAJ-mG-31O" firstAttribute="centerY" secondItem="3zz-xd-Y1d" secondAttribute="centerY" id="S8g-3K-Yvi"/>
-                            <constraint firstItem="258-jj-ndm" firstAttribute="trailing" secondItem="AiK-7e-Wh3" secondAttribute="trailing" constant="16" id="TwQ-NH-oIF"/>
                             <constraint firstItem="Ibb-zJ-XGz" firstAttribute="leading" secondItem="258-jj-ndm" secondAttribute="leading" constant="16" id="m5i-48-Bih"/>
-                            <constraint firstItem="258-jj-ndm" firstAttribute="bottom" secondItem="AiK-7e-Wh3" secondAttribute="bottom" constant="16" id="q3V-Ls-oUf"/>
                             <constraint firstItem="3zz-xd-Y1d" firstAttribute="leading" secondItem="258-jj-ndm" secondAttribute="leading" constant="16" id="wta-Gc-owe"/>
                             <constraint firstItem="3zz-xd-Y1d" firstAttribute="top" secondItem="Ibb-zJ-XGz" secondAttribute="bottom" constant="21.5" id="yWG-cf-dqo"/>
                             <constraint firstItem="258-jj-ndm" firstAttribute="trailing" secondItem="oAJ-mG-31O" secondAttribute="trailing" constant="16" id="zHx-xN-pDl"/>
@@ -186,14 +196,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="xmark.bin.fill" catalog="system" width="128" height="92"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

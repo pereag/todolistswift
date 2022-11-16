@@ -12,10 +12,17 @@ final class ItemTableViewCell: UITableViewCell {
     
     // MARK: - Input
     @IBOutlet weak var todoContentLabel: UILabel!
-    @IBOutlet weak var editButtonLabel: NSLayoutConstraint!
     
     // MARK: Outputs
     @IBAction func didPressEditButton(_ sender: Any) {
         
+    }
+    
+    @IBAction func didPressRemoveButton(_ sender: Any) {
+        
+    }
+    
+    func configure(todo: String) {
+        todoContentLabel.text = todo
     }
 }
