@@ -21,9 +21,6 @@ final class ListRepository : ListRepositoryType {
         
         todoObject.content = content
         stack.saveContext()
-        
-        print("yolo: ", stack.context)
-        
     }
     
     func removeTodo(index: Int) {
@@ -31,11 +28,30 @@ final class ListRepository : ListRepositoryType {
         do {
             let object = try stack.context.fetch(request)
             if !object.isEmpty {
+                print(object)
                 stack.context.delete(object[index])
                 stack.saveContext()
             }
         } catch {
-            print(error)
+            //print(error)
+        }
+    }
+    
+    func getTodos() -> [String] {
+        let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
+
+        guard let result = try? stack.context.fetch(request) else { return [] }
+        
+        if result.count <= 0 {
+            return []
+        } else {
+            var todos: [String] = []
+            for todo in result {
+                if (todo.content != nil) {
+                    todos.append(todo.content!)
+                }
+            }
+            return todos
         }
     }
 }

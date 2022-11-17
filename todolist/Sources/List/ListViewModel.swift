@@ -12,19 +12,17 @@ class ListViewModel {
     // MARK: - Properties
     var context: Context = Context.init()
     var repository: ListRepository? = nil
-    private var todos: [String] = [] {
-        didSet {
-            if let lastElement = todos.last {
-                repository?.addTodo(content: lastElement)
-            }
-        }
-    }
+    private var todos: [String] = []
     
     // MARK: - Initializer
     
     func viewDidLoad() {
         repository = ListRepository(stack: context.stack)
+        todos = repository!.getTodos()
         displayTodoList?(todos)
+        
+        print(todos)
+        
     }
     
     //MARK: Outputs
@@ -37,8 +35,7 @@ class ListViewModel {
     func didPressAdd(todo: String) {
         let todoClean = todo.trimmingCharacters(in: .whitespaces)
         if todoClean != "" {
-            todos.append(todo)
-            print(todos)
+            repository?.addTodo(content: todo)
         } else {
             let alertContent = AlertContent(
                 title: "Alert",
@@ -46,7 +43,7 @@ class ListViewModel {
                 cancelTitle: "Ok"
             )
             self.displayedAlert?(alertContent)
-            print(todoClean)
+            //print(todoClean)
         }
     }
     
