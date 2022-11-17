@@ -9,7 +9,13 @@ import UIKit
 
 final class ListViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
+    private var listViewModel : ListViewModel?
+    
     private var items: [String] = []
+    
+    func config(listViewModel: ListViewModel) {
+        self.listViewModel = listViewModel
+    }
     
     func update(items: [String]) {
         self.items = items
@@ -25,7 +31,7 @@ final class ListViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSo
         guard items.indices.contains(indexPath.row) else { return .init() }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
         
-        cell.configure(todo: items[indexPath.row])
+        cell.configure(todo: items[indexPath.row], indexRow: indexPath.row, listViewModel: listViewModel!)
         return cell
     }
     

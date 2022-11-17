@@ -54,6 +54,22 @@ final class ListRepository : ListRepositoryType {
             return todos
         }
     }
+    
+    func editTodo(index: Int, content: String) {
+        let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
+        
+        do {
+            let object = try stack.context.fetch(request)
+            if !object.isEmpty {
+                object[index].content = content
+                stack.context.delete(object[index])
+                stack.saveContext()
+            }
+        } catch {
+            //print(error)
+        }
+        
+    }
 }
 
 protocol ListRepositoryType {

@@ -24,8 +24,9 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        listViewModel.viewDidLoad()
         bindViewModel()
+        listViewModel.viewDidLoad()
+        dataSource.config(listViewModel: listViewModel)
         todoTableView.dataSource = dataSource
         todoTableView.delegate = dataSource
     }
@@ -43,7 +44,7 @@ class ListViewController: UIViewController {
     }
     
     private func bindDataSource() {
-       // dataSource.didSelectItemAt = listViewModel
+        
     }
     
     // MARK: Output

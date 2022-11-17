@@ -20,9 +20,6 @@ class ListViewModel {
         repository = ListRepository(stack: context.stack)
         todos = repository!.getTodos()
         displayTodoList?(todos)
-        
-        print(todos)
-        
     }
     
     //MARK: Outputs
@@ -36,6 +33,8 @@ class ListViewModel {
         let todoClean = todo.trimmingCharacters(in: .whitespaces)
         if todoClean != "" {
             repository?.addTodo(content: todo)
+            todos = repository!.getTodos()
+            displayTodoList?(todos)
         } else {
             let alertContent = AlertContent(
                 title: "Alert",
@@ -47,7 +46,13 @@ class ListViewModel {
         }
     }
     
-    // MARK: Endpoint
+    func didPressRemoveTodo(index: Int){
+        repository?.removeTodo(index: index)
+        todos = repository!.getTodos()
+        displayTodoList?(todos)
+    }
     
-    
+    func didPressEditTodo(index: Int, content: String) {
+        repository?.editTodo(index: index, content: content)
+    }
 }
