@@ -12,6 +12,7 @@ class ListViewModel {
     // MARK: - Properties
     var context: Context = Context.init()
     var repository: ListRepository? = nil
+    var currentTodoIndex: Int? = nil
     private var todos: [String] = []
     
     // MARK: - Initializer
@@ -26,6 +27,7 @@ class ListViewModel {
     
     var displayTodoList: (([String]) -> Void)?
     var displayedAlert: ((AlertContent) -> Void)?
+    var displayedTextFieldAlert: ((textFieldAlertContent) -> Void)?
     
     // MARK: Inputs
     
@@ -52,7 +54,19 @@ class ListViewModel {
         displayTodoList?(todos)
     }
     
-    func didPressEditTodo(index: Int, content: String) {
-        repository?.editTodo(index: index, content: content)
+    func didPressEditTodo(index: Int, todoContent: String) {
+        let textFieldAlertContent = textFieldAlertContent(
+            title: "Alert",
+            message: "Edit your todo content.",
+            textField: todoContent,
+            cancelTitle: "Ok"
+        )
+        
+        currentTodoIndex = index
+        self.displayedTextFieldAlert?(textFieldAlertContent)
+    }
+    
+    func changeTodoValue(content: String) {
+        repository?.editTodo(index: self.currentTodoIndex!, content: content)
     }
 }

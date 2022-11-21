@@ -7,4 +7,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    var content: String = ""
+    var index: Int = 0
+    @IBOutlet weak var todoContentField: UITextField!
 }

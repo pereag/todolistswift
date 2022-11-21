@@ -62,11 +62,13 @@ final class ListRepository : ListRepositoryType {
             let object = try stack.context.fetch(request)
             if !object.isEmpty {
                 object[index].content = content
-                stack.context.delete(object[index])
+                
+                //stack.context.delete(object[index])
+                
                 stack.saveContext()
             }
         } catch {
-            //print(error)
+            print(error)
         }
         
     }
@@ -74,6 +76,8 @@ final class ListRepository : ListRepositoryType {
 
 protocol ListRepositoryType {
     func addTodo(content: String)
+    
+    func editTodo(index: Int, content: String)
     
     func removeTodo(index: Int)
 }

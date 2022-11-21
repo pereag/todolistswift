@@ -12,3 +12,10 @@ struct AlertContent {
     let message: String
     let cancelTitle: String
 }
+
+struct textFieldAlertContent {
+    let title: String
+    let message: String
+    let textField: String
+    let cancelTitle: String
+}

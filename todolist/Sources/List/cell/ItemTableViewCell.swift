@@ -15,12 +15,13 @@ final class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var todoContentLabel: UILabel!
     
     // MARK: Outputs
-    @IBAction func didPressEditButton(_ sender: Any) {
-        print(index!)
-    }
-    
+
     @IBAction func didPressRemoveButton(_ sender: Any) {
         listViewModel?.didPressRemoveTodo(index: index!)
+    }
+    
+    @IBAction func didPressEditButton(_ sender: Any) {
+        listViewModel?.didPressEditTodo(index: index!, todoContent: todoContentLabel.text!)
     }
     
     func configure(todo: String, indexRow: Int, listViewModel: ListViewModel) {
@@ -28,6 +29,4 @@ final class ItemTableViewCell: UITableViewCell {
         self.index = indexRow
         self.listViewModel = listViewModel
     }
-    
-    
 }

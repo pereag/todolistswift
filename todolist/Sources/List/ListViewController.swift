@@ -41,6 +41,12 @@ class ListViewController: UIViewController {
                 self?.presentAlert(content: alertContent)
             }
         }
+        
+        listViewModel.displayedTextFieldAlert = { [weak self] textFieldAlertContent in
+            DispatchQueue.main.async {
+                self?.presentAlertWithField(content: textFieldAlertContent, listViewModel: self!.listViewModel)
+            }
+        }
     }
     
     private func bindDataSource() {
@@ -55,10 +61,32 @@ class ListViewController: UIViewController {
 }
 
 extension UIViewController {
-    func presentAlert(content: AlertContent) {
+    func presentAlert(content: AlertContent){
         let alertVC = UIAlertController( title: content.title, message: content.message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: content.cancelTitle, style: .cancel, handler: nil))
         self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func presentAlertWithField(content: textFieldAlertContent, listViewModel: ListViewModel) {
+        var value: String = "" {
+            didSet {
+                listViewModel.changeTodoValue(content: value)
+            }
+        }
+        let alertVC = UIAlertController( title: content.title, message: content.message, preferredStyle: .alert)
+        alertVC.addTextField {(textField) in
+            textField.text = content.textField
+        }
+        
+        alertVC.addAction(UIAlertAction(title: content.cancelTitle, style: .default, handler: { [weak alertVC] (_) in
+            let textField = alertVC!.textFields![0]// Force unwrapping because we know it exists.
+            value = String(describing: textField.text)
+            
+        }))
+        self.present(alertVC, animated: true, completion: nil)
+        print("Text field:", String(describing: alertVC.textFields![0].text))
+        
+        
     }
 }
 

@@ -89,8 +89,7 @@
                                                                 <imageReference key="image" image="pencil" catalog="system" symbolScale="medium"/>
                                                             </buttonConfiguration>
                                                             <connections>
-                                                                <action selector="didPressEditButton:" destination="OKM-1Z-lJr" eventType="touchUpInside" id="Jnr-na-KHv"/>
-                                                                <segue destination="f3g-T9-c7G" kind="showDetail" id="LCW-f8-SxU"/>
+                                                                <action selector="didPressEditButton:" destination="OKM-1Z-lJr" eventType="touchUpInside" id="QGb-ha-uDG"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -149,50 +148,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="176.80000000000001" y="-204.64767616191907"/>
-        </scene>
-        <!--Details View Controller-->
-        <scene sceneID="OJd-bc-4fJ">
-            <objects>
-                <viewController id="f3g-T9-c7G" customClass="DetailsViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VwY-KZ-ttP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-zJ-XGz">
-                                <rect key="frame" x="16" y="16" width="343" height="27.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="todo text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3zz-xd-Y1d">
-                                <rect key="frame" x="16" y="65" width="254" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAJ-mG-31O">
-                                <rect key="frame" x="279" y="64.5" width="80" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Update"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="258-jj-ndm"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="3zz-xd-Y1d" firstAttribute="height" secondItem="oAJ-mG-31O" secondAttribute="height" multiplier="0.971429" id="1Zx-0r-vA9"/>
-                            <constraint firstItem="Ibb-zJ-XGz" firstAttribute="top" secondItem="258-jj-ndm" secondAttribute="top" constant="16" id="B7r-Lv-fuN"/>
-                            <constraint firstItem="258-jj-ndm" firstAttribute="trailing" secondItem="Ibb-zJ-XGz" secondAttribute="trailing" constant="16" id="Blc-LR-Vgj"/>
-                            <constraint firstItem="oAJ-mG-31O" firstAttribute="leading" secondItem="3zz-xd-Y1d" secondAttribute="trailing" constant="9" id="RCx-xG-Zze"/>
-                            <constraint firstItem="oAJ-mG-31O" firstAttribute="centerY" secondItem="3zz-xd-Y1d" secondAttribute="centerY" id="S8g-3K-Yvi"/>
-                            <constraint firstItem="Ibb-zJ-XGz" firstAttribute="leading" secondItem="258-jj-ndm" secondAttribute="leading" constant="16" id="m5i-48-Bih"/>
-                            <constraint firstItem="3zz-xd-Y1d" firstAttribute="leading" secondItem="258-jj-ndm" secondAttribute="leading" constant="16" id="wta-Gc-owe"/>
-                            <constraint firstItem="3zz-xd-Y1d" firstAttribute="top" secondItem="Ibb-zJ-XGz" secondAttribute="bottom" constant="21.5" id="yWG-cf-dqo"/>
-                            <constraint firstItem="258-jj-ndm" firstAttribute="trailing" secondItem="oAJ-mG-31O" secondAttribute="trailing" constant="16" id="zHx-xN-pDl"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r0H-SB-PKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1012" y="-205"/>
         </scene>
     </scenes>
     <resources>
