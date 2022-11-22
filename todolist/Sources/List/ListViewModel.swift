@@ -10,17 +10,21 @@ import Foundation
 class ListViewModel {
     
     // MARK: - Properties
-    var context: Context = Context.init()
-    var repository: ListRepository? = nil
-    var currentTodoIndex: Int? = nil
+    private var context: Context = Context.init()
+    private var repository: ListRepository? = nil
+    private var currentTodoIndex: Int? = nil
     private var todos: [String] = []
     
     // MARK: - Initializer
     
     func viewDidLoad() {
         repository = ListRepository(stack: context.stack)
-        todos = repository!.getTodos()
-        displayTodoList?(todos)
+        if repository != nil {
+            todos = repository!.getTodos()
+            displayTodoList?(todos)
+        } else {
+            getAlertContentForAnOtherError()
+        }
     }
     
     //MARK: Outputs
@@ -34,24 +38,26 @@ class ListViewModel {
     func didPressAdd(todo: String) {
         let todoClean = todo.trimmingCharacters(in: .whitespaces)
         if todoClean != "" {
-            repository?.addTodo(content: todo)
-            todos = repository!.getTodos()
-            displayTodoList?(todos)
+            if repository != nil {
+                repository!.addTodo(content: todo)
+                todos = repository!.getTodos()
+                displayTodoList?(todos)
+            } else {
+                getAlertContentForAnOtherError()
+            }
         } else {
-            let alertContent = AlertContent(
-                title: "Alert",
-                message: "The todo field is empty.",
-                cancelTitle: "Ok"
-            )
-            self.displayedAlert?(alertContent)
-            //print(todoClean)
+            getAlertContentForAnOtherError()
         }
     }
     
     func didPressRemoveTodo(index: Int){
-        repository?.removeTodo(index: index)
-        todos = repository!.getTodos()
-        displayTodoList?(todos)
+        if repository != nil {
+            repository!.removeTodo(index: index)
+            todos = repository!.getTodos()
+            displayTodoList?(todos)
+        } else {
+            getAlertContentForAnOtherError()
+        }
     }
     
     func didPressEditTodo(index: Int, todoContent: String) {
@@ -69,12 +75,25 @@ class ListViewModel {
     func changeTodoValue(content: String) {
         guard let index = currentTodoIndex else{ return }
         
-        if content == "" {
+        if content.trimmingCharacters(in: .whitespaces) == "" {
             didPressRemoveTodo(index: index)
         } else {
-            repository?.editTodo(index: index, content: content)
-            todos = repository!.getTodos()
-            displayTodoList?(todos)
+            if repository != nil {
+                repository?.editTodo(index: index, content: content)
+                todos = repository!.getTodos()
+                displayTodoList?(todos)
+            } else {
+                getAlertContentForAnOtherError()
+            }
         }
+    }
+    
+    private func getAlertContentForAnOtherError() {
+        let alertContent = AlertContent(
+            title: "Alert",
+            message: "An error has occurred, please try again later.",
+            cancelTitle: "Ok"
+        )
+        self.displayedAlert?(alertContent)
     }
 }

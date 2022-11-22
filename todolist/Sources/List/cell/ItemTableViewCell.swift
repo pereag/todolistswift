@@ -8,20 +8,23 @@
 import UIKit
 
 final class ItemTableViewCell: UITableViewCell {
-    var index: Int?
-    var listViewModel: ListViewModel?
+    private var index: Int?
+    private weak var listViewModel: ListViewModel?
     
     // MARK: - Input
-    @IBOutlet weak var todoContentLabel: UILabel!
+    @IBOutlet private weak var todoContentLabel: UILabel!
     
     // MARK: Outputs
 
-    @IBAction func didPressRemoveButton(_ sender: Any) {
-        listViewModel?.didPressRemoveTodo(index: index!)
+    @IBAction private func didPressRemoveButton(_ sender: Any) {
+        guard let index = index else { return }
+        listViewModel?.didPressRemoveTodo(index: index)
     }
     
-    @IBAction func didPressEditButton(_ sender: Any) {
-        listViewModel?.didPressEditTodo(index: index!, todoContent: todoContentLabel.text!)
+    @IBAction private func didPressEditButton(_ sender: Any) {
+        guard let index = index else { return }
+        guard let todoContent = todoContentLabel.text else { return }
+        listViewModel?.didPressEditTodo(index: index, todoContent: todoContent)
     }
     
     func configure(todo: String, indexRow: Int, listViewModel: ListViewModel) {

@@ -44,16 +44,15 @@ class ListViewController: UIViewController {
         
         listViewModel.displayedTextFieldAlert = { [weak self] textFieldAlertContent in
             DispatchQueue.main.async {
-                self?.presentAlertWithField(content: textFieldAlertContent, listViewModel: self!.listViewModel)
+                if self != nil {
+                    self?.presentAlertWithField(content: textFieldAlertContent, listViewModel: self!.listViewModel)
+                }
             }
         }
     }
     
-    private func bindDataSource() {
-        
-    }
-    
     // MARK: Output
+    
     @IBAction func didPressAddButton(_ sender: Any) {
         listViewModel.didPressAdd(todo: todoTextField.text ?? "")
         todoTextField.text = ""
@@ -79,11 +78,10 @@ extension UIViewController {
         }
         
         alertVC.addAction(UIAlertAction(title: content.cancelTitle, style: .default, handler: { [weak alertVC] (_) in
-            let textField = alertVC!.textFields![0]// Force unwrapping because we know it exists.
+            let textField = alertVC!.textFields![0]
             if textField.text != nil {
                 value = String(describing: textField.text!)
             }
-            
         }))
         self.present(alertVC, animated: true, completion: nil)
     }
