@@ -80,13 +80,12 @@ extension UIViewController {
         
         alertVC.addAction(UIAlertAction(title: content.cancelTitle, style: .default, handler: { [weak alertVC] (_) in
             let textField = alertVC!.textFields![0]// Force unwrapping because we know it exists.
-            value = String(describing: textField.text)
+            if textField.text != nil {
+                value = String(describing: textField.text!)
+            }
             
         }))
         self.present(alertVC, animated: true, completion: nil)
-        print("Text field:", String(describing: alertVC.textFields![0].text))
-        
-        
     }
 }
 

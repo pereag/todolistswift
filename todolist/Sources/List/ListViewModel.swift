@@ -67,6 +67,14 @@ class ListViewModel {
     }
     
     func changeTodoValue(content: String) {
-        repository?.editTodo(index: self.currentTodoIndex!, content: content)
+        guard let index = currentTodoIndex else{ return }
+        
+        if content == "" {
+            didPressRemoveTodo(index: index)
+        } else {
+            repository?.editTodo(index: index, content: content)
+            todos = repository!.getTodos()
+            displayTodoList?(todos)
+        }
     }
 }

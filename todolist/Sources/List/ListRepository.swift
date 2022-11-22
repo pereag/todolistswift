@@ -61,10 +61,7 @@ final class ListRepository : ListRepositoryType {
         do {
             let object = try stack.context.fetch(request)
             if !object.isEmpty {
-                object[index].content = content
-                
-                //stack.context.delete(object[index])
-                
+                object[index].content = content                
                 stack.saveContext()
             }
         } catch {
