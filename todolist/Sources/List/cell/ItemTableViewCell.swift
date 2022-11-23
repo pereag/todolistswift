@@ -14,6 +14,8 @@ final class ItemTableViewCell: UITableViewCell {
     // MARK: - Input
     @IBOutlet private weak var todoContentLabel: UILabel!
     
+    @IBOutlet var removeButton: UIButton!
+    
     // MARK: Outputs
 
     @IBAction private func didPressRemoveButton(_ sender: Any) {
@@ -31,5 +33,7 @@ final class ItemTableViewCell: UITableViewCell {
         todoContentLabel.text = todo
         self.index = indexRow
         self.listViewModel = listViewModel
+        removeButton.tintColor = .red
+        
     }
 }
