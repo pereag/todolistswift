@@ -18,17 +18,20 @@ final class ItemTableViewCell: UITableViewCell {
     
     // MARK: Outputs
 
+    // On did Press remove button, ask at viewModel to remove the todo selected by index.
     @IBAction private func didPressRemoveButton(_ sender: Any) {
         guard let index = index else { return }
         listViewModel?.didPressRemoveTodo(index: index)
     }
     
+    // On did Press edit button, ask at viewModel to display alert view field for edit current todo.
     @IBAction private func didPressEditButton(_ sender: Any) {
         guard let index = index else { return }
         guard let todoContent = todoContentLabel.text else { return }
         listViewModel?.didPressEditTodo(index: index, todoContent: todoContent)
     }
     
+    // Configure this table view cell
     func configure(todo: String, indexRow: Int, listViewModel: ListViewModel) {
         todoContentLabel.text = todo
         self.index = indexRow

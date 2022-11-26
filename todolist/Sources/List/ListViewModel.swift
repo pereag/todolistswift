@@ -17,6 +17,8 @@ class ListViewModel {
     
     // MARK: - Initializer
     
+    
+    // Init repository and use function displayTodoList.
     func viewDidLoad() {
         repository = ListRepository(stack: context.stack)
         if repository != nil {
@@ -35,6 +37,7 @@ class ListViewModel {
     
     // MARK: Inputs
     
+    // Add todo in core data if data format is correct.
     func didPressAdd(todo: String) {
         let todoClean = todo.trimmingCharacters(in: .whitespaces)
         if todoClean != "" {
@@ -50,6 +53,7 @@ class ListViewModel {
         }
     }
     
+    // Remove todo selected by index.
     func didPressRemoveTodo(index: Int){
         if repository != nil {
             repository!.removeTodo(index: index)
@@ -60,6 +64,7 @@ class ListViewModel {
         }
     }
     
+    // send an alert content with a field for enter the new value.
     func didPressEditTodo(index: Int, todoContent: String) {
         let textFieldAlertContent = textFieldAlertContent(
             title: "Alert",
@@ -72,6 +77,7 @@ class ListViewModel {
         self.displayedTextFieldAlert?(textFieldAlertContent)
     }
     
+    // Change old todo value with the new value. If the new value is empty, the todo is removed.
     func changeTodoValue(content: String) {
         guard let index = currentTodoIndex else{ return }
         
@@ -88,6 +94,7 @@ class ListViewModel {
         }
     }
     
+    // Send alert content
     private func getAlertContentForAnOtherError() {
         let alertContent = AlertContent(
             title: "Alert",

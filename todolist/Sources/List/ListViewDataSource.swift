@@ -13,16 +13,20 @@ final class ListViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSo
     
     private var items: [String] = []
     
+    
+    // Add ListViewModel in list viewModel var.
     func config(listViewModel: ListViewModel) {
         self.listViewModel = listViewModel
     }
     
+    // Update self.items
     func update(items: [String]) {
         self.items = items
     }
     
     var didSelectItemAt: ((Int) -> Void)?
     
+    // the three all functions is used for init tableView and TableViewCell.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }

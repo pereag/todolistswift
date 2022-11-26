@@ -15,14 +15,15 @@ final class ListRepository : ListRepositoryType {
         self.stack = stack
     }
     
+    // Add todo in coreData
     func addTodo(content: String) {
-        
         let todoObject = TodoEntity(context: stack.context)
         
         todoObject.content = content
         stack.saveContext()
     }
     
+    // Remove todo from coreData
     func removeTodo(index: Int) {
         let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
         do {
@@ -37,6 +38,7 @@ final class ListRepository : ListRepositoryType {
         }
     }
     
+    // Get all todo from coreData
     func getTodos() -> [String] {
         let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
 
@@ -55,6 +57,7 @@ final class ListRepository : ListRepositoryType {
         }
     }
     
+    // Change an todo value in core data
     func editTodo(index: Int, content: String) {
         let request: NSFetchRequest<TodoEntity> = TodoEntity.fetchRequest()
         
