@@ -1,8 +1,8 @@
 //
-//  ListViewModelTest.swift
+//  todolistTests.swift
 //  todolistTests
 //
-//  Created by Valc0d3 on 30/09/2022.
+//  Created by Valc0d3 on 27/11/2022.
 //
 
 import XCTest
@@ -11,9 +11,21 @@ import XCTest
 final class ListViewModelTests: XCTestCase {
     private var viewModel: ListViewModel!
     
-    func testViewDidLoad() {
+    /* func testViewDidLoad() {
+        let expectation = self.expectation(description: "dispay todoList")
         viewModel = ListViewModel()
+        
+        var counter = 0
+        
+        viewModel.displayTodoList = { todos in
+            if counter == 0 {
+                // verif
+            }
+            
+        }
         viewModel.viewDidLoad()
+        waitForExpectations(timeout: 1.0)
+        
     }
     
     func testDidPressAddWhenTodoIsNotEmty() {
@@ -23,7 +35,7 @@ final class ListViewModelTests: XCTestCase {
         let a: String = "yolo"
         
         XCTAssertEqual(a, "yolo")
-    }
+    } */
     
     /* func testDidPressAddWhenTodoIsEmty() {
         
@@ -61,4 +73,5 @@ final class ListViewModelTests: XCTestCase {
         
     } */
 }
+
 

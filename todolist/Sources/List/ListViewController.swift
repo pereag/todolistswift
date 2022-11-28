@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITextViewDelegate {
+final class ListViewController: UIViewController, UITextViewDelegate {
     
-    private let listViewModel = ListViewModel()
+    private let listViewModel = ListViewModel(repository: .init(stack: Context.init().stack), todos: [])
     private let dataSource = ListViewDataSource()
-    private let Todo: [String] = []
+    private let todos: [String] = []
 
     // MARK: Inputs
     

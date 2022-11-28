@@ -10,23 +10,27 @@ import Foundation
 class ListViewModel {
     
     // MARK: - Properties
-    private var context: Context = Context.init()
-    private var repository: ListRepository? = nil
-    private var currentTodoIndex: Int? = nil
-    private var todos: [String] = []
+
+    private var repository: ListRepository
+    private var currentTodoIndex: Int?
+    private var todos: [String]
+
+    // MARK: - Init
+
+    init(
+        repository: ListRepository,
+        todos: [String]
+    ) {
+        self.repository = repository
+        self.todos = todos
+    }
     
     // MARK: - Initializer
     
-    
     // Init repository and use function displayTodoList.
     func viewDidLoad() {
-        repository = ListRepository(stack: context.stack)
-        if repository != nil {
-            todos = repository!.getTodos()
-            displayTodoList?(todos)
-        } else {
-            getAlertContentForAnOtherError()
-        }
+        todos = repository.getTodos()
+        displayTodoList?(todos)
     }
     
     //MARK: Outputs
@@ -41,13 +45,9 @@ class ListViewModel {
     func didPressAdd(todo: String) {
         let todoClean = todo.trimmingCharacters(in: .whitespaces)
         if todoClean != "" {
-            if repository != nil {
-                repository!.addTodo(content: todo)
-                todos = repository!.getTodos()
-                displayTodoList?(todos)
-            } else {
-                getAlertContentForAnOtherError()
-            }
+            repository.addTodo(content: todo)
+            todos = repository.getTodos()
+            displayTodoList?(todos)
         } else {
             getAlertContentForAnOtherError()
         }
@@ -55,13 +55,9 @@ class ListViewModel {
     
     // Remove todo selected by index.
     func didPressRemoveTodo(index: Int){
-        if repository != nil {
-            repository!.removeTodo(index: index)
-            todos = repository!.getTodos()
-            displayTodoList?(todos)
-        } else {
-            getAlertContentForAnOtherError()
-        }
+        repository.removeTodo(index: index)
+        todos = repository.getTodos()
+        displayTodoList?(todos)
     }
     
     // send an alert content with a field for enter the new value.
@@ -84,13 +80,9 @@ class ListViewModel {
         if content.trimmingCharacters(in: .whitespaces) == "" {
             didPressRemoveTodo(index: index)
         } else {
-            if repository != nil {
-                repository?.editTodo(index: index, content: content)
-                todos = repository!.getTodos()
-                displayTodoList?(todos)
-            } else {
-                getAlertContentForAnOtherError()
-            }
+            repository.editTodo(index: index, content: content)
+            todos = repository.getTodos()
+            displayTodoList?(todos)
         }
     }
     
