@@ -8,7 +8,14 @@
 import Foundation
 import CoreData
 
-final class ListRepository : ListRepositoryType {
+protocol ListRepositoryType {
+    func addTodo(content: String)
+    func editTodo(index: Int, content: String)
+    func removeTodo(index: Int)
+    func getTodos() -> [String]
+}
+
+final class ListRepository: ListRepositoryType {
     private let stack: CoreDataStack
         
     init(stack: CoreDataStack) {
@@ -70,15 +77,5 @@ final class ListRepository : ListRepositoryType {
         } catch {
             print(error)
         }
-        
     }
 }
-
-protocol ListRepositoryType {
-    func addTodo(content: String)
-    
-    func editTodo(index: Int, content: String)
-    
-    func removeTodo(index: Int)
-}
-

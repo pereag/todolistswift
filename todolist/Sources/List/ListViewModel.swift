@@ -11,14 +11,14 @@ class ListViewModel {
     
     // MARK: - Properties
 
-    private var repository: ListRepository
+    private var repository: ListRepositoryType
     private var currentTodoIndex: Int?
     private var todos: [String]
 
     // MARK: - Init
 
     init(
-        repository: ListRepository,
+        repository: ListRepositoryType,
         todos: [String]
     ) {
         self.repository = repository

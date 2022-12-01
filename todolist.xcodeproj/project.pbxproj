@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D8029A1D28E70A6A0043BAAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */; };
-		D8029A1F28E70A6A0043BAAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A1E28E70A6A0043BAAE /* SceneDelegate.swift */; };
 		D8029A2128E70A6A0043BAAE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A2028E70A6A0043BAAE /* ListViewController.swift */; };
 		D8029A2428E70A6A0043BAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2228E70A6A0043BAAE /* Main.storyboard */; };
 		D8029A2728E70A6A0043BAAE /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8029A2528E70A6A0043BAAE /* Todo.xcdatamodeld */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		D8029A1928E70A6A0043BAAE /* todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8029A1E28E70A6A0043BAAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D8029A2028E70A6A0043BAAE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D8029A2328E70A6A0043BAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8029A2628E70A6A0043BAAE /* todolist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = todolist.xcdatamodel; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */,
-				D8029A1E28E70A6A0043BAAE /* SceneDelegate.swift */,
 				D8029A2228E70A6A0043BAAE /* Main.storyboard */,
 				D8029A2A28E70A6C0043BAAE /* LaunchScreen.storyboard */,
 				D8029A2528E70A6A0043BAAE /* Todo.xcdatamodeld */,
@@ -269,7 +266,6 @@
 				D82F97F3290ACCBD00C6D032 /* ItemTableViewCell.swift in Sources */,
 				D8029A1D28E70A6A0043BAAE /* AppDelegate.swift in Sources */,
 				D8E6EA452922DBC400363783 /* Context.swift in Sources */,
-				D8029A1F28E70A6A0043BAAE /* SceneDelegate.swift in Sources */,
 				D8E6EA4C2922DE4400363783 /* ListRepository.swift in Sources */,
 				D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */,
 				D8E6EA4A2922DC7100363783 /* TodoEntity.swift in Sources */,

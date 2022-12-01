@@ -9,7 +9,12 @@ import UIKit
 
 final class ListViewController: UIViewController, UITextViewDelegate {
     
-    private let listViewModel = ListViewModel(repository: .init(stack: Context.init().stack), todos: [])
+    private let listViewModel = ListViewModel(
+        repository: ListRepository(
+            stack: Context.init().stack
+        ),
+        todos: []
+    )
     private let dataSource = ListViewDataSource()
     private let todos: [String] = []
 
