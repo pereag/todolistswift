@@ -37,7 +37,7 @@ class ListViewModel {
     
     var displayTodoList: (([String]) -> Void)?
     var displayedAlert: ((AlertContent) -> Void)?
-    var displayedTextFieldAlert: ((textFieldAlertContent) -> Void)?
+    var displayedTextFieldAlert: ((TextFieldAlertContent) -> Void)?
     
     // MARK: Inputs
     
@@ -62,7 +62,7 @@ class ListViewModel {
     
     // send an alert content with a field for enter the new value.
     func didPressEditTodo(index: Int, todoContent: String) {
-        let textFieldAlertContent = textFieldAlertContent(
+        let textFieldAlertContent = TextFieldAlertContent(
             title: "Alert",
             message: "Edit your todo content.",
             textField: todoContent,
@@ -75,7 +75,7 @@ class ListViewModel {
     
     // Change old todo value with the new value. If the new value is empty, the todo is removed.
     func changeTodoValue(content: String) {
-        guard let index = currentTodoIndex else{ return }
+        guard let index = currentTodoIndex else { return }
         
         if content.trimmingCharacters(in: .whitespaces) == "" {
             didPressRemoveTodo(index: index)

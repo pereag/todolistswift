@@ -13,7 +13,7 @@ struct AlertContent {
     let cancelTitle: String
 }
 
-struct textFieldAlertContent {
+struct TextFieldAlertContent {
     let title: String
     let message: String
     let textField: String

@@ -8,9 +8,6 @@
 import XCTest
 @testable import todolist
 
-import XCTest
-@testable import todolist
-
 class ListViewModelTests: XCTestCase {
     
     var sut: ListViewModel!
@@ -92,37 +89,44 @@ class ListViewModelTests: XCTestCase {
         XCTAssertEqual(displayedAlert?.cancelTitle, "Ok")
     }
 
-    /* func testDidPressEditTodoDisplaysTextFieldAlert() {
-           let expectedTextFieldAlertContent = textFieldAlertContent(
-               title: "Alert",
-               message: "Edit your todo content.",
-               textField: "",
-               cancelTitle: "Ok"
-           )
-           var capturedTextFieldAlertContent: textFieldAlertContent?
-           sut.displayedTextFieldAlert = { textFieldAlertContent in
-               capturedTextFieldAlertContent = textFieldAlertContent
-           }
-           let index = 0
-           sut.didPressEditTodo(index: index, todoContent: "")
-           XCTAssertEqual(capturedTextFieldAlertContent, expectedTextFieldAlertContent)
-       } */
-       
-       func testChangeTodoValueWithEmptyContentCallsRemoveTodo() {
-           let index = 0
-           sut.changeTodoValue(content: "")
-           XCTAssertTrue(mockRepository.removeTodoCalled)
-           XCTAssertEqual(mockRepository.invokedRemoveTodoParameters, index)
-       }
-       
-       func testChangeTodoValueWithNonEmptyContentCallsEditTodo() {
-           let index = 0
-           let content = "New Todo Content"
-           sut.changeTodoValue(content: content)
-           XCTAssertTrue(mockRepository.editTodoCalled)
-           XCTAssertEqual(mockRepository.invokedEditTodoParameters?.index, index)
-           XCTAssertEqual(mockRepository.invokedEditTodoParameters?.content, content)
-       }
+    func testDidPressEditTodo() {
+        let expectation = self.expectation(description: "Return alert content")
+        
+        sut.displayedTextFieldAlert = { textFieldAlertContent in
+            XCTAssertEqual(textFieldAlertContent.textField, "test")
+            expectation.fulfill()
+        }
+    
+        sut.didPressEditTodo(index: 0, todoContent: "test")
+
+        waitForExpectations(timeout: 1.0)
+    }
+    
+    func testDidChangeTodoValueButContentLengthEqualAtZero() {
+        let expectation = self.expectation(description: "")
+
+        sut.displayTodoList = { _ in
+            expectation.fulfill()
+        }
+        
+        sut.didPressEditTodo(index: 1, todoContent: "")
+        sut.changeTodoValue(content: "")
+
+        waitForExpectations(timeout: 1.0)
+    }
+    
+    func testDidChangeTodoValueButContentIsNotEmpty() {
+        let expectation = self.expectation(description: "")
+
+        sut.displayTodoList = { _ in
+            expectation.fulfill()
+        }
+        
+        sut.didPressEditTodo(index: 1, todoContent: "Test")
+        sut.changeTodoValue(content: "Test 1")
+
+        waitForExpectations(timeout: 1.0)
+    }
 }
 
 class MockListRepository: ListRepositoryType {

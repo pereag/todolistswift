@@ -92,7 +92,7 @@ extension UIViewController {
     }
     
     // Present Alert with field with the content geted.
-    func presentAlertWithField(content: textFieldAlertContent, listViewModel: ListViewModel) {
+    func presentAlertWithField(content: TextFieldAlertContent, listViewModel: ListViewModel) {
         var value: String = "" {
             didSet {
                 listViewModel.changeTodoValue(content: value)
