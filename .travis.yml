@@ -1,0 +1,6 @@
+language: swift
+osx_image: xcode14.0.1
+xcode_project: mvvmApp.xcodeproj
+xcode_scheme: mvvmApp
+xcode_destination:
+    platform=iOS Simulator,OS=16.1,name=iPhone 14

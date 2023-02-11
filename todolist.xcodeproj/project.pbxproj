@@ -14,6 +14,7 @@
 		D8029A2928E70A6C0043BAAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2828E70A6C0043BAAE /* Assets.xcassets */; };
 		D8029A2C28E70A6C0043BAAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2A28E70A6C0043BAAE /* LaunchScreen.storyboard */; };
 		D8029A5328E70B640043BAAE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A5228E70B640043BAAE /* ListViewModel.swift */; };
+		D80A8DC22997B6D3001D7D85 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = D80A8DC12997B6D3001D7D85 /* .travis.yml */; };
 		D82F97EF290ABAED00C6D032 /* AlerteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97EE290ABAED00C6D032 /* AlerteContent.swift */; };
 		D82F97F3290ACCBD00C6D032 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */; };
 		D85032A72924F199000ED0F5 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85032A62924F199000ED0F5 /* ListViewDataSource.swift */; };
@@ -44,6 +45,7 @@
 		D8029A2B28E70A6C0043BAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8029A2D28E70A6C0043BAAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8029A5228E70B640043BAAE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D80A8DC12997B6D3001D7D85 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		D82F97EE290ABAED00C6D032 /* AlerteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteContent.swift; sourceTree = "<group>"; };
 		D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		D85032A62924F199000ED0F5 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		D8029A1028E70A6A0043BAAE = {
 			isa = PBXGroup;
 			children = (
+				D80A8DC12997B6D3001D7D85 /* .travis.yml */,
 				D8029A1B28E70A6A0043BAAE /* todolist */,
 				D8CB122E29337D8A00477F3E /* todolistTests */,
 				D8029A1A28E70A6A0043BAAE /* Products */,
@@ -244,6 +247,7 @@
 			files = (
 				D8029A2C28E70A6C0043BAAE /* LaunchScreen.storyboard in Resources */,
 				D8029A2928E70A6C0043BAAE /* Assets.xcassets in Resources */,
+				D80A8DC22997B6D3001D7D85 /* .travis.yml in Resources */,
 				D8029A2428E70A6A0043BAAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
