@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAA520BBE7E1DD97D952289B /* Pods_todolistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E941E3A888556700DCE563 /* Pods_todolistTests.framework */; };
+		BFAEAA48DB9CE3D7D67BEB34 /* Pods_todolist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4FC9B08B604B88415391B2 /* Pods_todolist.framework */; };
 		D8029A1D28E70A6A0043BAAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */; };
 		D8029A2128E70A6A0043BAAE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8029A2028E70A6A0043BAAE /* ListViewController.swift */; };
 		D8029A2428E70A6A0043BAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8029A2228E70A6A0043BAAE /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 		D82F97EF290ABAED00C6D032 /* AlerteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97EE290ABAED00C6D032 /* AlerteContent.swift */; };
 		D82F97F3290ACCBD00C6D032 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */; };
 		D85032A72924F199000ED0F5 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85032A62924F199000ED0F5 /* ListViewDataSource.swift */; };
+		D878717B29AA0DCC0059303B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D878717A29AA0DCC0059303B /* GoogleService-Info.plist */; };
+		D878717E29AA10000059303B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D878717D29AA10000059303B /* FirebaseAnalytics */; };
 		D8CB123A29337E7B00477F3E /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB123929337E7A00477F3E /* ListViewModelTests.swift */; };
 		D8E6EA452922DBC400363783 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA442922DBC400363783 /* Context.swift */; };
 		D8E6EA482922DC4500363783 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA472922DC4500363783 /* CoreDataStack.swift */; };
@@ -35,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E941E3A888556700DCE563 /* Pods_todolistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todolistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68222ABCACF984F14DD09EDE /* Pods-todolist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todolist.release.xcconfig"; path = "Target Support Files/Pods-todolist/Pods-todolist.release.xcconfig"; sourceTree = "<group>"; };
+		810EE4A37030EEAC4EF2B67F /* Pods-todolistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todolistTests.release.xcconfig"; path = "Target Support Files/Pods-todolistTests/Pods-todolistTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC4FC9B08B604B88415391B2 /* Pods_todolist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todolist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2D55463061B74FF318FE67 /* Pods-todolist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todolist.debug.xcconfig"; path = "Target Support Files/Pods-todolist/Pods-todolist.debug.xcconfig"; sourceTree = "<group>"; };
+		C50F1668595B0D8584C3B8B6 /* Pods-todolistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todolistTests.debug.xcconfig"; path = "Target Support Files/Pods-todolistTests/Pods-todolistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8029A1928E70A6A0043BAAE /* todolist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todolist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8029A1C28E70A6A0043BAAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8029A2028E70A6A0043BAAE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,7 @@
 		D82F97EE290ABAED00C6D032 /* AlerteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlerteContent.swift; sourceTree = "<group>"; };
 		D82F97F2290ACCBD00C6D032 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		D85032A62924F199000ED0F5 /* ListViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataSource.swift; sourceTree = "<group>"; };
+		D878717A29AA0DCC0059303B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8CB122D29337D8A00477F3E /* todolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CB123929337E7A00477F3E /* ListViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		D8E6EA442922DBC400363783 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
@@ -60,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D878717E29AA10000059303B /* FirebaseAnalytics in Frameworks */,
+				BFAEAA48DB9CE3D7D67BEB34 /* Pods_todolist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,18 +80,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA520BBE7E1DD97D952289B /* Pods_todolistTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		253DB88130FA09FF4073F7F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE2D55463061B74FF318FE67 /* Pods-todolist.debug.xcconfig */,
+				68222ABCACF984F14DD09EDE /* Pods-todolist.release.xcconfig */,
+				C50F1668595B0D8584C3B8B6 /* Pods-todolistTests.debug.xcconfig */,
+				810EE4A37030EEAC4EF2B67F /* Pods-todolistTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A55B0F82A836B19960DF2373 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC4FC9B08B604B88415391B2 /* Pods_todolist.framework */,
+				04E941E3A888556700DCE563 /* Pods_todolistTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8029A1028E70A6A0043BAAE = {
 			isa = PBXGroup;
 			children = (
+				D878717A29AA0DCC0059303B /* GoogleService-Info.plist */,
 				D8029A1B28E70A6A0043BAAE /* todolist */,
 				D8CB122E29337D8A00477F3E /* todolistTests */,
 				D8029A1A28E70A6A0043BAAE /* Products */,
+				253DB88130FA09FF4073F7F8 /* Pods */,
+				A55B0F82A836B19960DF2373 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8029A4628E70A6C0043BAAE /* Build configuration list for PBXNativeTarget "todolist" */;
 			buildPhases = (
+				FA1956E2DDBDF0E7A04120C4 /* [CP] Check Pods Manifest.lock */,
 				D8029A1528E70A6A0043BAAE /* Sources */,
 				D8029A1628E70A6A0043BAAE /* Frameworks */,
 				D8029A1728E70A6A0043BAAE /* Resources */,
@@ -177,6 +216,9 @@
 			dependencies = (
 			);
 			name = todolist;
+			packageProductDependencies = (
+				D878717D29AA10000059303B /* FirebaseAnalytics */,
+			);
 			productName = todolist;
 			productReference = D8029A1928E70A6A0043BAAE /* todolist.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8CB123329337D8A00477F3E /* Build configuration list for PBXNativeTarget "todolistTests" */;
 			buildPhases = (
+				5AD055D5C8A3F255C52985B9 /* [CP] Check Pods Manifest.lock */,
 				D8CB122929337D8A00477F3E /* Sources */,
 				D8CB122A29337D8A00477F3E /* Frameworks */,
 				D8CB122B29337D8A00477F3E /* Resources */,
@@ -227,6 +270,9 @@
 				Base,
 			);
 			mainGroup = D8029A1028E70A6A0043BAAE;
+			packageReferences = (
+				D878717C29AA10000059303B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D8029A1A28E70A6A0043BAAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -243,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8029A2C28E70A6C0043BAAE /* LaunchScreen.storyboard in Resources */,
+				D878717B29AA0DCC0059303B /* GoogleService-Info.plist in Resources */,
 				D8029A2928E70A6C0043BAAE /* Assets.xcassets in Resources */,
 				D8029A2428E70A6A0043BAAE /* Main.storyboard in Resources */,
 			);
@@ -256,6 +303,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AD055D5C8A3F255C52985B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-todolistTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA1956E2DDBDF0E7A04120C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-todolist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8029A1528E70A6A0043BAAE /* Sources */ = {
@@ -430,6 +524,7 @@
 		};
 		D8029A4728E70A6C0043BAAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE2D55463061B74FF318FE67 /* Pods-todolist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +555,7 @@
 		};
 		D8029A4828E70A6C0043BAAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68222ABCACF984F14DD09EDE /* Pods-todolist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +586,7 @@
 		};
 		D8CB123429337D8A00477F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50F1668595B0D8584C3B8B6 /* Pods-todolistTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +605,7 @@
 		};
 		D8CB123529337D8A00477F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810EE4A37030EEAC4EF2B67F /* Pods-todolistTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D878717C29AA10000059303B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D878717D29AA10000059303B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D878717C29AA10000059303B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D8029A2528E70A6A0043BAAE /* Todo.xcdatamodeld */ = {
