@@ -6,10 +6,12 @@ jobs:
       xcode: 14.0.1
     steps:
       - checkout
-      - run: 
-          name: Fastlane
+      - run:
+          name: Install CocoaPods
           command: |
-            fastlane scan
+            gem install cocoapods
+            pod install
+      - run: fastlane scan
 
 workflows:
   sample:
