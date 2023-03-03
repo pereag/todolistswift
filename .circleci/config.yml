@@ -11,6 +11,8 @@ jobs:
           command: |
             gem install fastlane
             fastlane scan
+    timeouts:
+      build: 1800
 
 workflows:
   sample:
