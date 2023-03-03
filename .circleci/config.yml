@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: fastlane scan
+          name: Install Fastlane and run scan
           command: |
             gem install fastlane
             fastlane scan
