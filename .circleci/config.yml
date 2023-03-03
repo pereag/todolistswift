@@ -7,12 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Fastlane and run scan
+          name: fastlane scan
           command: |
             gem install fastlane
-            fastlane scan
-    timeouts:
-      build: 1800
+            fastlane scan --timeout 600
 
 workflows:
   sample:
