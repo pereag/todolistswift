@@ -7,11 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install CocoaPods
+          name: fastlane scan
           command: |
-            gem install cocoapods
-            pod install
-      - run: fastlane scan
+            gem install fastlane
+            fastlane scan
 
 workflows:
   sample:
