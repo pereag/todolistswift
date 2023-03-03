@@ -6,11 +6,11 @@ jobs:
       xcode: 14.0.1
     steps:
       - checkout
-      - run:
-          name: fastlane scan
+      - run: 
+          name: Fastlane
           command: |
-            gem install fastlane
-            fastlane scan -timeout 600
+            fastlane scan
+          no_output_timeout: 60m
 
 workflows:
   sample:
