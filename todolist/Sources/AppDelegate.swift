@@ -21,5 +21,3 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-// @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
