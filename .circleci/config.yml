@@ -4,6 +4,8 @@ jobs:
   build:
     macos:
       xcode: 14.0.1
+    environment:
+      FASTLANE_XCODE_LIST_TIMEOUT: 300
     steps:
       - checkout
       - run: 
