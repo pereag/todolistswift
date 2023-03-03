@@ -10,7 +10,7 @@ jobs:
           name: fastlane scan
           command: |
             gem install fastlane
-            fastlane scan --timeout 600
+            fastlane scan -timeout 600
 
 workflows:
   sample:
