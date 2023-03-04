@@ -24,6 +24,8 @@
 		D8364B5029B3549D008BB677 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D8364B4F29B3549D008BB677 /* FirebaseAnalyticsSwift */; };
 		D85032A72924F199000ED0F5 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85032A62924F199000ED0F5 /* ListViewDataSource.swift */; };
 		D889A43429B354D000D3E9F2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D889A43329B354D000D3E9F2 /* FirebaseAnalytics */; };
+		D889A43629B3C07800D3E9F2 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D889A43529B3C07800D3E9F2 /* FirebasePerformance */; };
+		D889A43829B3C08500D3E9F2 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D889A43729B3C08500D3E9F2 /* FirebasePerformance */; };
 		D8CB123A29337E7B00477F3E /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB123929337E7A00477F3E /* ListViewModelTests.swift */; };
 		D8E6EA452922DBC400363783 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA442922DBC400363783 /* Context.swift */; };
 		D8E6EA482922DC4500363783 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6EA472922DC4500363783 /* CoreDataStack.swift */; };
@@ -70,6 +72,7 @@
 			files = (
 				D8364B5029B3549D008BB677 /* FirebaseAnalyticsSwift in Frameworks */,
 				D8364B3F29B33BAB008BB677 /* FirebaseCrashlytics in Frameworks */,
+				D889A43829B3C08500D3E9F2 /* FirebasePerformance in Frameworks */,
 				D889A43429B354D000D3E9F2 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 			files = (
 				D8364B4E29B3548A008BB677 /* FirebaseAnalyticsSwift in Frameworks */,
 				D8364B4C29B35484008BB677 /* FirebaseAnalytics in Frameworks */,
+				D889A43629B3C07800D3E9F2 /* FirebasePerformance in Frameworks */,
 				D8364B4429B348A4008BB677 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +208,7 @@
 				D8364B3E29B33BAB008BB677 /* FirebaseCrashlytics */,
 				D8364B4F29B3549D008BB677 /* FirebaseAnalyticsSwift */,
 				D889A43329B354D000D3E9F2 /* FirebaseAnalytics */,
+				D889A43729B3C08500D3E9F2 /* FirebasePerformance */,
 			);
 			productName = todolist;
 			productReference = D8029A1928E70A6A0043BAAE /* todolist.app */;
@@ -227,6 +232,7 @@
 				D8364B4329B348A4008BB677 /* FirebaseCrashlytics */,
 				D8364B4B29B35484008BB677 /* FirebaseAnalytics */,
 				D8364B4D29B3548A008BB677 /* FirebaseAnalyticsSwift */,
+				D889A43529B3C07800D3E9F2 /* FirebasePerformance */,
 			);
 			productName = todolistTests;
 			productReference = D8CB122D29337D8A00477F3E /* todolistTests.xctest */;
@@ -634,6 +640,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D8364B3B29B33BAB008BB677 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		D889A43529B3C07800D3E9F2 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8364B3B29B33BAB008BB677 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		D889A43729B3C08500D3E9F2 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8364B3B29B33BAB008BB677 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
 		};
 /* End XCSwiftPackageProductDependency section */
 
