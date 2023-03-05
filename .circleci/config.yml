@@ -6,13 +6,12 @@ jobs:
       xcode: 14.0.1
     steps:
       - checkout
-      - run: fastlane scan 
-
-      #- store_test_results:
-       #   path: test_output
-      #- store_artifacts:
-      #    path: test_output
-       #   destination: scan-output
+      - run: 
+          name: Fastlane
+          command: |
+            export FASTLANE_XCODEBUILD_SETTINGS_RETRIES=8
+            export FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT=120
+            fastlane scan
 
 workflows:
   sample:
