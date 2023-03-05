@@ -19,6 +19,7 @@
 		D8364B3A29B33B64008BB677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8364B3929B33B64008BB677 /* GoogleService-Info.plist */; };
 		D85032A72924F199000ED0F5 /* ListViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85032A62924F199000ED0F5 /* ListViewDataSource.swift */; };
 		D873BA7629B487F700A17CCC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D873BA7529B487F700A17CCC /* FirebaseAnalytics */; };
+		D873BA7C29B48E0F00A17CCC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D873BA7B29B48E0F00A17CCC /* FirebaseAnalyticsSwift */; };
 		D88D3CBD29B4876100FF6A52 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D88D3CBC29B4876100FF6A52 /* FirebaseAnalytics */; };
 		D88D3CBF29B4876700FF6A52 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D88D3CBE29B4876700FF6A52 /* FirebaseAnalyticsSwift */; };
 		D88D3CC129B4877700FF6A52 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = D88D3CC029B4877700FF6A52 /* FirebasePerformance */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D873BA7C29B48E0F00A17CCC /* FirebaseAnalyticsSwift in Frameworks */,
 				D873BA7629B487F700A17CCC /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +213,7 @@
 			name = todolistTests;
 			packageProductDependencies = (
 				D873BA7529B487F700A17CCC /* FirebaseAnalytics */,
+				D873BA7B29B48E0F00A17CCC /* FirebaseAnalyticsSwift */,
 			);
 			productName = todolistTests;
 			productReference = D8CB122D29337D8A00477F3E /* todolistTests.xctest */;
@@ -593,6 +596,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D8364B3B29B33BAB008BB677 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		D873BA7B29B48E0F00A17CCC /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8364B3B29B33BAB008BB677 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 		D88D3CBC29B4876100FF6A52 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
